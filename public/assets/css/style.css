@@ -170,7 +170,7 @@ h2 {
     background: linear-gradient(115deg, #380404, #681e1e);
     color: white;
     overflow: hidden;
-    padding-bottom: 60px;
+    padding-bottom: 30px;
 }
 
 
@@ -699,4 +699,17 @@ footer a:hover,
 footer a:focus,
 footer a:active {
     text-decoration: none;
+}
+
+/* Ajuste do título do Hero no computador */
+@media (min-width: 769px) {
+    .hero h1 {
+        font-size: clamp(42px, 4vw, 64px);
+        line-height: 1.15;
+        letter-spacing: -1px;
+        text-align: left;
+        max-width: 650px;
+        margin: 0 0 28px;
+        text-wrap: balance;
+    }
 }
