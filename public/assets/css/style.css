@@ -691,3 +691,12 @@ dialog::backdrop {
         height: 210px
     }
 }
+
+/* Links do rodapé sem sublinhado */
+footer a,
+footer a:visited,
+footer a:hover,
+footer a:focus,
+footer a:active {
+    text-decoration: none;
+}
