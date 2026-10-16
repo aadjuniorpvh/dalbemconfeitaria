@@ -713,3 +713,140 @@ footer a:active {
         text-wrap: balance;
     }
 }
+
+/* ===================================
+   DEPOIMENTOS - DALBEM CONFEITARIA
+=================================== */
+
+.depoimentos-section {
+    background: #F4E3D9;
+    padding: 85px 0;
+    overflow: hidden;
+}
+
+.depoimentos-heading {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.depoimentos-heading h2 {
+    color: #380404;
+    font-size: clamp(30px, 3.5vw, 46px);
+    line-height: 1.2;
+    margin: 12px 0 16px;
+}
+
+.depoimentos-heading p {
+    color: #633b3b;
+    font-size: 17px;
+    line-height: 1.6;
+}
+
+.depoimentos-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.depoimentos-track {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: calc((100% - 40px) / 3);
+    gap: 20px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    flex: 1;
+    min-width: 0;
+    padding: 12px 2px 20px;
+}
+
+.depoimentos-track::-webkit-scrollbar {
+    display: none;
+}
+
+.depoimento-card {
+    background: #ffffff;
+    border: 1px solid #efd8d4;
+    border-radius: 18px;
+    padding: 14px;
+    box-shadow: 0 8px 25px rgba(56, 4, 4, .08);
+    scroll-snap-align: start;
+    min-width: 0;
+}
+
+.depoimento-card img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.depoimentos-arrow {
+    width: 46px;
+    height: 46px;
+    flex: 0 0 46px;
+    border: 0;
+    border-radius: 50%;
+    background: #7B0100;
+    color: #ffffff;
+    font-size: 22px;
+    cursor: pointer;
+    transition: background .2s, transform .2s;
+}
+
+.depoimentos-arrow:hover {
+    background: #380404;
+    transform: scale(1.06);
+}
+
+.depoimentos-arrow:disabled {
+    opacity: .35;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.depoimentos-count {
+    margin-top: 15px;
+    text-align: center;
+    color: #7B0100;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+    .depoimentos-track {
+        grid-auto-columns: calc((100% - 20px) / 2);
+    }
+}
+
+/* Celular */
+@media (max-width: 600px) {
+    .depoimentos-section {
+        padding: 55px 0;
+    }
+
+    .depoimentos-container {
+        gap: 7px;
+    }
+
+    .depoimentos-track {
+        grid-auto-columns: 100%;
+        gap: 12px;
+    }
+
+    .depoimentos-arrow {
+        width: 32px;
+        height: 38px;
+        flex-basis: 32px;
+        font-size: 17px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .depoimentos-track {
+        scroll-behavior: auto;
+    }
+}
